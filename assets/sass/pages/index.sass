@@ -2,10 +2,11 @@
   height: 100vh
   display: flex
   flex-direction: column
+  position: relative
 
   &__head
     background: $pr-gradient
-    padding: 24px 24px 48px
+    padding: 3vh 3vh 6vh
 
   &__row
     @include flex(row, space-between, center)
@@ -14,66 +15,66 @@
   &__user
 
   &__subTitle
-    margin-top: 20px
-    @include font(400, 14px, normal, $white)
+    margin-top: 2vh
+    @include font(400, 2vh, normal, $white)
 
   &__title
-    margin-top: 8px
-    @include font(700, 20px, normal, $white)
+    margin-top: 1vh
+    @include font(700, 3vh, normal, $white)
 
   &__search
-    margin-top: 16px
+    margin-top: 2vh
     background-color: $white
-    border-radius: 35px
-    padding: 2px 10px
+    border-radius: 4vh
+    padding: 0.3vh 1.2vh
     @include flex()
-    gap: 8px
+    gap: 1vh
 
     input
-      @include font()
-      padding: 8px 4px
+      @include font(400, 2vh)
+      padding: 1vh .5vh
       flex: 1
 
   &__body
     background-color: $white
-    border-radius: 32px 32px 0 0
+    border-radius: 4vh 4vh 0 0
     flex: 1
-    position: relative
-    top: -28px
-    padding: 16px 0
-    // border: 1px solid red
+    margin-top: -4vh
+    padding-top: 2vh
+    border: 1px solid red
 
 .content
+  // width: 100vw
   // background-color: #f6f6f6
   &__toggle
     display: block
-    width: 48px
-    height: 4px
+    width: 6vh
+    height: 0.5vh
     margin: 0 auto
     background: $pr-gradient
     border-radius: 2px
 
   &__quizes
-    margin-top: 24px
+    margin-top: 3vh
 
     .quizes-pagination
-      padding: 0 24px 8px
+      padding: 0 3vh 1vh
       @include flex(row, flex-start, center)
-      gap: 18px
+      gap: 2.5vh
 
 
   &__container
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
     align-content: flex-start
-    gap: 16px
-    padding: 8px 24px 16px
+    gap: 2vh
+    padding: 1vh 3vh 2vh
     overflow-y: auto
-    height: 60vh
+    height: 54vh
 
 
   &__footer
-    padding: 12px 24px
+    padding: 1.5vh 3vh
 
   &__submit
     margin: 0 auto
@@ -82,15 +83,15 @@
   border-radius: 5px
   background-color: $white
   box-shadow: 2px 6px 20px 0px rgba(51, 51, 51, 0.10)
-  padding: 12px
+  padding: 1.5vh
 
   &__row
     @include flex(row, flex-start, center)
-    gap: 24px
+    gap: 3vh
 
   &__image
-    width: 72px
-    height: 72px
+    width: 9vh
+    height: 9vh
     background-color: #c4c4c4
     border-radius: 4px
 
@@ -98,16 +99,16 @@
     
 
   &__title
-    @include font(500, 18px, normal)
+    @include font(500, 2.5vh, normal)
     background: $pr-gradient
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
 
   &__info
-    margin-top: 8px
+    margin-top: 1vh
     @include flex(row, flex-start, center)
-    gap: 4px
-    @include font(400, 14px, normal, $gray-2)
+    gap: .5vh
+    @include font(400, 1.7vh, normal, $gray-2)
 
   &__rate
