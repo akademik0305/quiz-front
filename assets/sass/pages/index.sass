@@ -1,12 +1,14 @@
 .main
-  // height: 100vh
-  // display: flex
-  // flex-direction: column
-  // position: relative
+  height: 100vh
+  background: $pr-gradient
+  display: flex
+  flex-direction: column
+  position: relative
+  overflow: hidden
 
   &__head
-    background: $pr-gradient
-    padding: 3vh 3vh 6vh
+    
+    padding: 3vh 3vh 2vh
 
   &__row
     @include flex(row, space-between, center)
@@ -38,10 +40,13 @@
   &__body
     background-color: $white
     border-radius: 4vh 4vh 0 0
-    // flex: 1
-    margin-top: -4vh
+    flex: 1
     padding-top: 2vh
-    border: 1px solid red
+    transition: margin .6s linear
+    @include flex(column, flex-start)
+    &.close
+      width: 100%
+      margin-top: 68vh
 
 .content
   // width: 100vw
@@ -55,23 +60,7 @@
     border-radius: 2px
 
   &__quizes
-    margin-top: 3vh
-
-    .quizes-pagination
-      padding: 0 3vh 1vh
-      @include flex(row, flex-start, center)
-      gap: 2.5vh
-
-
-  &__container
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-    align-content: flex-start
-    gap: 2vh
-    padding: 1vh 3vh 2vh
-    overflow-y: auto
-    height: 57vh
-
+    flex: 1 
 
   &__footer
     padding: 1.5vh 3vh
@@ -79,36 +68,3 @@
   &__submit
     margin: 0 auto
 
-.quiz
-  border-radius: 5px
-  background-color: $white
-  box-shadow: 2px 6px 20px 0px rgba(51, 51, 51, 0.10)
-  padding: 1.5vh
-
-  &__row
-    @include flex(row, flex-start, center)
-    gap: 3vh
-
-  &__image
-    width: 9vh
-    height: 9vh
-    background-color: #c4c4c4
-    border-radius: 4px
-
-  &__main
-    
-
-  &__title
-    @include font(500, 2.5vh, normal)
-    background: $pr-gradient
-    background-clip: text
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-
-  &__info
-    margin-top: 1vh
-    @include flex(row, flex-start, center)
-    gap: .5vh
-    @include font(400, 1.7vh, normal, $gray-2)
-
-  &__rate
