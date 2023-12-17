@@ -64,7 +64,9 @@
         </swiper>
       </div>
 
-      <div class="content__submit">Settings</div>
+      <div class="content__footer">
+        <button class="content__submit base-button">Settings</button>
+      </div>
     </div>
   </div>
 </template>

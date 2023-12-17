@@ -57,17 +57,26 @@
     margin-top: 24px
 
     .quizes-pagination
-      padding: 0 24px
+      padding: 0 24px 8px
       @include flex(row, flex-start, center)
       gap: 18px
-    
+
 
   &__container
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    align-content: flex-start
     gap: 16px
-    padding: 16px 24px 30px
-    
+    padding: 8px 24px 16px
+    overflow-y: auto
+    height: 480px
+
+
+  &__footer
+    padding: 0 24px
+
+  &__submit
+    margin: 0 auto
 
 .quiz
   border-radius: 5px
@@ -86,9 +95,19 @@
     border-radius: 4px
 
   &__main
+    
 
   &__title
+    @include font(500, 18px, normal)
+    background: $pr-gradient
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
   &__info
+    margin-top: 8px
+    @include flex(row, flex-start, center)
+    gap: 4px
+    @include font(400, 14px, normal, $gray-2)
 
   &__rate

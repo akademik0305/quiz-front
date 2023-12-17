@@ -11,16 +11,27 @@ input
     border: none
     outline: none
 
+  
+.base-button
+  width: 100%
+  max-width: 600px
+  padding: 16px 0
+  @include flex(row, center, center)
+  background: $pr-gradient
+  border-radius: 5px
+  cursor: pointer
+  @include font(500, 16px, normal, $white)
+
 
 // custom scrollbar
 /* width */
 ::-webkit-scrollbar
-  width: 11px
+  width: 6px
 
 
 /* Track */
 ::-webkit-scrollbar-track
-  background-color: $pr-color
+  background-color: #eee
   border-radius: 6px
 
 /* Handle */
